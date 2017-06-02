@@ -1,0 +1,22 @@
+{
+  "name": "es67",
+  "version": "1.0.0",
+  "description": "Demos of ES6,7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hejianxian/es67.git"
+  },
+  "keywords": [
+    "demos"
+  ],
+  "author": "Hejx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hejianxian/es67/issues"
+  },
+  "homepage": "https://github.com/hejianxian/es67#readme"
+}
