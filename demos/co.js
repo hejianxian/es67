@@ -1,4 +1,5 @@
 const co = require('co');
+const log = require('../utils/log');
 
 // simple demo
 co(function* () {
@@ -6,7 +7,7 @@ co(function* () {
   var b = Promise.resolve(2);
   var c = Promise.resolve(3);
   var result = yield [a, b, c];
-  console.log(result);
+  log(result);
 }).catch(onerror);
 
 
@@ -33,7 +34,7 @@ co(function* () {
   var userInfo = yield getUserInfo();
   var ticket = yield getTicket(userInfo.username);
   
-  console.log(ticket);
+  log(ticket);
 }).catch(onerror);
 
 
@@ -42,7 +43,7 @@ co(function* () {
   try {
     yield Promise.reject(new Error('boom'));
   } catch (e) {
-    console.log(e.message);
+    log(e.message);
   }
 }).catch(onerror);
 
@@ -59,7 +60,7 @@ co(function* () {
     Promise.resolve('b'),
     Promise.resolve('c')
   ];
-  console.log(result);
+  log(result);
 }).catch(onerror);
 
 // Object co
@@ -68,7 +69,7 @@ co(function* () {
     name: Promise.resolve('hejx'),
     sex: Promise.resolve('man')
   };
-  console.log(result);
+  log(result);
 }).catch(onerror);
 
 
@@ -76,7 +77,7 @@ co(function* () {
 co(function* () {
   return yield Promise.resolve(true);
 }).then(function (val) {
-  console.log(val);
+  log(val);
 }, function (err) {
   console.error(err.stack);
 });
