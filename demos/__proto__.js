@@ -38,6 +38,15 @@ for(let prop in rabbit) {
 }
 
 
+// instanceof
+class Animal {}
+class Rabbit extends Animal {}
+
+let rb = new Rabbit();
+log(rb instanceof Rabbit); // true
+log(rb.__proto__ === Rabbit.prototype); // true
+log(rb.__proto__.__proto__ === Animal.prototype); // true
+
 // 1: Object.create(proto[, descriptors]) – creates an empty object with given proto as [[Prototype]] (can be null) and optional property descriptors.
 // 2: Object.getPrototypeOf(obj) – returns the [[Prototype]] of obj (same as __proto__ getter).
 // 3: Object.setPrototypeOf(obj, proto) – sets the [[Prototype]] of obj to proto (same as __proto__ setter).

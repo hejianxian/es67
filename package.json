@@ -22,5 +22,8 @@
   "dependencies": {
     "co": "^4.6.0",
     "moment": "^2.18.1"
-  }
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
 }
